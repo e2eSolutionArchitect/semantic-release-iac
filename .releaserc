@@ -5,7 +5,7 @@
     [
       "@semantic-release/commit-analyzer",
       {
-        "preset": "analyzeCommits",
+        "preset": "angular",
         "releaseRules": [
           { "type": "feat", "release": "minor" },
           { "type": "fix", "release": "patch" },
@@ -22,7 +22,7 @@
     [
       "@semantic-release/release-notes-generator",
       {
-        "preset": "generateNotes",
+        "preset": "angular",
         "presetConfig": {
           "types": [
             { "type": "feat", "section": "Features" },
