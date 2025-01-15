@@ -1,9 +1,10 @@
 name: Release
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+  # push:
+  #   branches:
+  #     - main
 
 jobs:
   release:
@@ -12,19 +13,13 @@ jobs:
     steps:
       # Checkout the repository
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # Set up Node.js
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '22'
-
-      # Clean npm cache and remove existing dependencies
-      - name: Clean npm Cache and Dependencies
-        run: |
-          npm cache clean --force
-          rm -rf node_modules package-lock.json
 
       # Install Semantic Release and Plugins
       - name: Install Dependencies
