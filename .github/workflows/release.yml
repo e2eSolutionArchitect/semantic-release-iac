@@ -1,0 +1,41 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      # Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+
+      # Clean npm cache and remove existing dependencies
+      - name: Clean npm Cache and Dependencies
+        run: |
+          npm cache clean --force
+          rm -rf node_modules package-lock.json
+
+      # Install Semantic Release and Plugins
+      - name: Install Dependencies
+        run: |
+          npm install semantic-release \
+            @semantic-release/changelog \
+            @semantic-release/git
+
+      # Run Semantic Release
+      - name: Run Semantic Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          DEBUG: semantic-release:*
+        run: npx semantic-release
