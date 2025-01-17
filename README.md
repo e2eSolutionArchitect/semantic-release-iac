@@ -1,7 +1,9 @@
 # Semantic Release for Infra as Code ( Terraform )
 
+:writing_hand: Feel free to contact and collaborate with us. You are welcome to contribute to our forum to build a better tomorrow. 
+
 **IMPORTANT**
-To avoid creating release version on every commit/pull request, please keep the release pipeline as 'workflow_dispatch'. As it is in .github/workflow/release.yml
+To avoid creating a release version on every commit/pull request, please keep the release pipeline as 'workflow_dispatch'. As it is in .github/workflow/release.yml
 
 
 # Semantic Release
