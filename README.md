@@ -9,7 +9,7 @@ To avoid creating release version on every commit/pull request, please keep the 
 To maintain consistency and ensure smooth Semantic Release automation, developers should follow a standardized commit message format. The commit messages should follow the **Conventional Commits** specification.
 
 
-# How to Implement Semantic Release - [Please refer here](https://github.com/TheSolutionArchitect/github-actions-shared-workflows/blob/main/release-pipeline-setup.md)
+# How to Implement Semantic Release - [Please refer here](./release-pipeline-setup.md)
 
 NOTE: To avoid creating a release version on every commit/pull request, please keep the release pipeline as 'workflow_dispatch'. As it is in .github/workflow/release.yml
 
