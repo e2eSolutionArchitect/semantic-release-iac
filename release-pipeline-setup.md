@@ -1,6 +1,6 @@
 # Semantic Release Pipeline Setup Guide
 
-Please refer working copy [here](https://github.com/TheSolutionArchitect/tf-aws-template-core-live/actions)
+Please refer working copy [here](https://github.com/e2eSolutionArchitect/semantic-release-iac/actions)
 
 - **Step 1** : Creare ./.github/workflows/release.yml (with the below content or [refer here](https://github.com/e2eSolutionArchitect/semantic-release-iac/blob/main/.github/workflows/release-calling-workflow.yml)) in the repository where the release pipeline to setup. This workflow is calling a callable workflow from [here](https://github.com/e2eSolutionArchitect/semantic-release-iac/blob/main/.github/workflows/release-shared-workflow.yml). Currently both are in the same repository but usually 'callable workflow' should be in a separate shared repository. 
 - **Step 2** : Create .releaserc file at repository root. refer to the file content [here](https://github.com/e2eSolutionArchitect/semantic-release-iac/blob/main/.releaserc)
