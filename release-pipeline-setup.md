@@ -2,8 +2,8 @@
 
 Please refer working copy [here](https://github.com/TheSolutionArchitect/tf-aws-template-core-live/actions)
 
-- **Step 1** : Creare ./.github/workflows/release.yml (with the below content or [refer here](https://github.com/TheSolutionArchitect/github-actions-shared-workflows/blob/main/.github/workflows/release-calling-workflow.yml)) in the repository where the release pipeline to setup.
-- **Step 2** : Create .releaserc file at repository root. refer to the file content [here](https://github.com/TheSolutionArchitect/github-actions-shared-workflows/blob/main/.releaserc)
+- **Step 1** : Creare ./.github/workflows/release.yml (with the below content or [refer here](https://github.com/e2eSolutionArchitect/semantic-release-iac/blob/main/.github/workflows/release-calling-workflow.yml)) in the repository where the release pipeline to setup. This workflow is calling a callable workflow from [here](https://github.com/e2eSolutionArchitect/semantic-release-iac/blob/main/.github/workflows/release-shared-workflow.yml). Currently both are in the same repository but usually 'callable workflow' should be in a separate shared repository. 
+- **Step 2** : Create .releaserc file at repository root. refer to the file content [here](https://github.com/e2eSolutionArchitect/semantic-release-iac/blob/main/.releaserc)
 
 Content of [release.yml](https://github.com/TheSolutionArchitect/github-actions-shared-workflows/blob/main/.github/workflows/release-calling-workflow.yml)
 ```
