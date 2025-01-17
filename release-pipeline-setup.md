@@ -15,7 +15,8 @@ jobs:
     uses: e2eSolutionArchitect/semantic-release-iac/.github/workflows/release-shared-workflow.yml@main
 
 # Basically it is
-# uses: <GitUser>/<GitRepositoryName>/.github/workflows/release-shared-workflow.yml@main
+# uses: <GitUser>/<GitRepositoryName>/.github/workflows/<workflow yml file name>@<ref>
+# uses: e2eSolutionArchitect/semantic-release-iac/.github/workflows/release-shared-workflow.yml@main
 ```
 Commit and Push to the repository.
 
